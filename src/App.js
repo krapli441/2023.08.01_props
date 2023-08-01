@@ -40,15 +40,17 @@ const genreILike = [
   },
 ];
 
+function renderGenre(list) {
+  return <Genre name={list.name} />;
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div>
           <h1>Music</h1>
-          {genreILike.map((list) => (
-            <Genre name={list.name} />
-          ))}
+          {genreILike.map(renderGenre)}
         </div>
       </header>
     </div>
