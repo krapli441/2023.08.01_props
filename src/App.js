@@ -6,42 +6,23 @@ function Genre({ name }) {
 
 const genreILike = [
   {
+    id: 1,
     name: "House",
   },
-  {
-    name: "Disco",
-  },
-  {
-    name: "Jazz",
-  },
-  {
-    name: "Techno",
-  },
-  {
-    name: "Trap",
-  },
-  {
-    name: "Drum&Bass",
-  },
-  {
-    name: "G-Funk",
-  },
-  {
-    name: "Fusion Jazz",
-  },
-  {
-    name: "Rock",
-  },
-  {
-    name: "Metal",
-  },
-  {
-    name: "IDM",
-  },
+  { id: 2, name: "Disco" },
+  { id: 3, name: "Jazz" },
+  { id: 4, name: "Techno" },
+  { id: 5, name: "Trap" },
+  { id: 6, name: "Drum&Bass" },
+  { id: 7, name: "G-Funk" },
+  { id: 8, name: "Fusion Jazz" },
+  { id: 9, name: "Rock" },
+  { id: 10, name: "Metal" },
+  { id: 11, name: "IDM" },
 ];
 
 function renderGenre(list) {
-  return <Genre name={list.name} />;
+  return <Genre key={list.id} name={list.name} />;
 }
 
 function App() {
