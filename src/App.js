@@ -1,8 +1,44 @@
 import "./App.css";
 
-function Genre(props) {
-  return <h2>I Like {props.genre}.</h2>;
+function Genre({ name }) {
+  return <h2>I Like {name}.</h2>;
 }
+
+const genreILike = [
+  {
+    name: "House",
+  },
+  {
+    name: "Disco",
+  },
+  {
+    name: "Jazz",
+  },
+  {
+    name: "Techno",
+  },
+  {
+    name: "Trap",
+  },
+  {
+    name: "Drum&Bass",
+  },
+  {
+    name: "G-Funk",
+  },
+  {
+    name: "Fusion Jazz",
+  },
+  {
+    name: "Rock",
+  },
+  {
+    name: "Metal",
+  },
+  {
+    name: "IDM",
+  },
+];
 
 function App() {
   return (
@@ -10,10 +46,9 @@ function App() {
       <header className="App-header">
         <div>
           <h1>Music</h1>
-          <Genre genre="house"></Genre>
-          <Genre genre="disco"></Genre>
-          <Genre genre="techno"></Genre>
-          <Genre genre="jazz"></Genre>
+          {genreILike.map((list) => (
+            <Genre name={list.name} />
+          ))}
         </div>
       </header>
     </div>
