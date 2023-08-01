@@ -1,22 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+function Genre(props) {
+  return <h2>I Like {props.genre}.</h2>;
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <h1>Music</h1>
+          <Genre genre="house"></Genre>
+          <Genre genre="disco"></Genre>
+          <Genre genre="techno"></Genre>
+          <Genre genre="jazz"></Genre>
+        </div>
       </header>
     </div>
   );
